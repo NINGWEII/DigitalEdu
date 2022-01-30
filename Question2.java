@@ -14,5 +14,7 @@ public class Question2 {
 			sum = arr[i] + arr[i + 1];
 		} System.out.println(sum);
 		
+		//რატომ აკუმულირდება პირველ sum-ში მასივის ელემენტების მატების შედეგი როდესაც მეორე sum-ში იგივე არ ხდება?
+		
 	}
 }
