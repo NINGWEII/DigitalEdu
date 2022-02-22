@@ -11,9 +11,8 @@ public class notAlone {
 //		notAlone([3, 4]) -> [3, 4];
 		
 		
-		int[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		int[] originalArray = {4, 6, 3, 8, 5, 8, 9, 2, 10};
 		int[] newArray = new int[originalArray.length];
-		System.out.println("Original array: " + Arrays.toString(originalArray));
 		for(int i = 0; i < originalArray.length; i++) {	
 	   	/* (1) ქვემოთ მოცემული კონდიციები უზრუნველჰყოფს, რომ მასივის პირველი და ბოლო ელემენტები არ შედარდეს 
 	    	*     არც წინა და არც მომდევნო ელემენტებს, რადგან პირველ ელემენტს წინა ელემენტი არ გააჩნია. 
@@ -30,8 +29,8 @@ public class notAlone {
 			else if(originalArray[i - 1] > originalArray[i + 1]) newArray[i] = originalArray[i - 1]; 
 			else if(originalArray[i - 1] < originalArray[i + 1]) newArray[i] = originalArray[i + 1];
 		}
-		
-		System.out.println("New array       " + Arrays.toString(newArray));
+		System.out.println("Original array: " + Arrays.toString(originalArray));
+		System.out.println("New array:      " + Arrays.toString(newArray));
 		
 		/* Update:
 		 * დაემატა ახალი მასივი int[] newArray, რომელშიც int[] originalArray-დან წამოღებული 
