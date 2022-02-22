@@ -12,30 +12,31 @@ public class notAlone {
 		
 
 		
-		int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-		System.out.println("Original array: " + Arrays.toString(arr));
-		for(int i = 0; i < arr.length; i++) {	
-	       /* (1) ქვემოთ მოცემული if() კონდიცია უზრუნველჰყოფს, რომ მასივის პირველი და ბოლო ელემენტები არ შედარდეს 
-	        *     არც წინა და არც მომდევნო ელემენტებს, რადგან პირველ ელემენტს წინა ელემენტი არ გააჩნია. 
-	        *     ხოლო ბოლო ელემენტს არ გააჩნია მომდევნო ელემენტი. 
+		int[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		int[] newArray = new int[originalArray.length];
+		System.out.println("Original array: " + Arrays.toString(originalArray));
+		for(int i = 0; i < originalArray.length; i++) {	
+	   /* (1) ქვემოთ მოცემული if() კონდიცია უზრუნველჰყოფს, რომ მასივის პირველი და ბოლო ელემენტები არ შედარდეს 
+	    *     არც წინა და არც მომდევნო ელემენტებს, რადგან პირველ ელემენტს წინა ელემენტი არ გააჩნია. 
+	    *     ხოლო ბოლო ელემენტს არ გააჩნია მომდევნო ელემენტი. 
 		* (2) ასევე, ეს კონდიცია უზრუნველჰყოფს, რომ ელემენტი 'მარტოა', ანუ არც წინა ელემენტის ტოლია 
 		*     და არც მომდევნოსი;
 		* (3) ასევე უზრუნველჰყოფს, რომ ელემენტის წინა და მომდევნო ელემენტები ერთმანეთის ტოლი არაა.				
 		*/	
-			if(   i == 0
-			   || i == arr.length - 1 
-			   || arr[i] == arr[i - 1] 
-			   || arr[i] == arr[i + 1] 
-			   || arr[i - 1] == arr[i + 1]) continue;	
-			else if(arr[i - 1] > arr[i + 1]) arr[i] = arr[i - 1]; 
-			else if(arr[i - 1] < arr[i + 1]) arr[i] = arr[i + 1];
+			if(i == 0 || i == originalArray.length - 1) newArray[i] = originalArray[i];
+			else if(originalArray[i] == originalArray[i - 1] 
+					|| originalArray[i] == originalArray[i + 1] 
+					|| originalArray[i - 1] == originalArray[i + 1]) continue;	
+			else if(originalArray[i - 1] > originalArray[i + 1]) newArray[i] = originalArray[i - 1]; 
+			else if(originalArray[i - 1] < originalArray[i + 1]) newArray[i] = originalArray[i + 1];
 		}
 		
-		System.out.println("New array       " + Arrays.toString(arr));
+		System.out.println("New array       " + Arrays.toString(newArray));
 		
-		// კოდი გამართულად არ მუშაობს ((
-
-		  
+		/* Update:
+		 * დაემატა ახალი მასივი int[] newArray, რომელშიც int[] originalArray-დან წამოღებული 
+		 * ელემენტები ინახება ამოცანის პირობის მიხედვით. 
+		 */ 
 			  
     }
 }
