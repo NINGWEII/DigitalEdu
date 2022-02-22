@@ -15,7 +15,7 @@ public class notAlone {
 		int[] newArray = new int[originalArray.length];
 		System.out.println("Original array: " + Arrays.toString(originalArray));
 		for(int i = 0; i < originalArray.length; i++) {	
-	   	/* (1) ქვემოთ მოცემული if() კონდიცია უზრუნველჰყოფს, რომ მასივის პირველი და ბოლო ელემენტები არ შედარდეს 
+	   	/* (1) ქვემოთ მოცემული კონდიციები უზრუნველჰყოფს, რომ მასივის პირველი და ბოლო ელემენტები არ შედარდეს 
 	    	*     არც წინა და არც მომდევნო ელემენტებს, რადგან პირველ ელემენტს წინა ელემენტი არ გააჩნია. 
 	    	*     ხოლო ბოლო ელემენტს არ გააჩნია მომდევნო ელემენტი. 
 	    	* (2) ასევე, ეს კონდიცია უზრუნველჰყოფს, რომ ელემენტი 'მარტოა', ანუ არც წინა ელემენტის ტოლია 
@@ -24,8 +24,8 @@ public class notAlone {
 	    	*/	
 			if(i == 0 || i == originalArray.length - 1) newArray[i] = originalArray[i];
 			else if(originalArray[i] == originalArray[i - 1] 
-					|| originalArray[i] == originalArray[i + 1] 
-					|| originalArray[i - 1] == originalArray[i + 1]) continue;	
+				|| originalArray[i] == originalArray[i + 1] 
+				|| originalArray[i - 1] == originalArray[i + 1]) continue;	
 			else if(originalArray[i - 1] > originalArray[i + 1]) newArray[i] = originalArray[i - 1]; 
 			else if(originalArray[i - 1] < originalArray[i + 1]) newArray[i] = originalArray[i + 1];
 		}
