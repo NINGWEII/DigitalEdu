@@ -25,7 +25,7 @@ public class notAlone {
 			if(i == 0 || i == originalArray.length - 1) newArray[i] = originalArray[i];
 			else if(originalArray[i] == originalArray[i - 1] 
 				|| originalArray[i] == originalArray[i + 1] 
-				|| originalArray[i - 1] == originalArray[i + 1]) continue;	
+				|| originalArray[i - 1] == originalArray[i + 1]) newArray[i] = originalArray[i];
 			else if(originalArray[i - 1] > originalArray[i + 1]) newArray[i] = originalArray[i - 1]; 
 			else if(originalArray[i - 1] < originalArray[i + 1]) newArray[i] = originalArray[i + 1];
 		}
